@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/drawable/background_gradient_horizontal.xml" value="0.2525" />
+        <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/drawable/background_gradient_vertical.xml" value="0.2525" />
+        <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/drawable/bg_bottom.xml" value="0.2525" />
+        <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/drawable/bg_content_detail.xml" value="0.2525" />
+        <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/drawable/bg_gradient_horizontal.xml" value="0.2525" />
+        <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/drawable/bg_gradient_vertical.xml" value="0.2525" />
+        <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/drawable/bg_radius_15.xml" value="0.2265" />
+        <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.2525" />
+        <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/drawable/ic_checked.xml" value="0.2525" />
+        <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/drawable/ic_empty.xml" value="0.2525" />
+        <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/drawable/ic_eye.xml" value="0.2525" />
+        <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/drawable/ic_like.xml" value="0.121" />
+        <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/drawable/ic_listview.xml" value="0.2265" />
+        <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/drawable/ic_setting.xml" value="0.2525" />
+        <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/drawable/ic_unlike.xml" value="0.2525" />
+        <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/drawable/ic_us_dollar.xml" value="0.2525" />
+        <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/drawable/ic_user.xml" value="0.2265" />
+        <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/drawable/ic_ware.xml" value="0.2525" />
+        <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/layout/activity_football_player_detail.xml" value="0.25" />
+        <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/layout/activity_player_football_detail.xml" value="0.25" />
+        <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/layout/activity_profile.xml" value="0.25" />
+        <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/layout/fragment_club.xml" value="0.25" />
+        <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/layout/fragment_like.xml" value="0.25" />
+        <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/layout/fragment_listview.xml" value="0.25" />
+        <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/layout/fragment_menu.xml" value="0.25" />
+        <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/layout/fragment_parameter.xml" value="0.25" />
+        <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/layout/item_club.xml" value="0.25" />
+        <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/layout/item_player_football.xml" value="0.25" />
+        <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/menu/menu_bottom_nav.xml" value="0.25" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
