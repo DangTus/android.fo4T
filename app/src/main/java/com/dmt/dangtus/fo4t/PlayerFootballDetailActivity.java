@@ -125,10 +125,16 @@ public class PlayerFootballDetailActivity extends AppCompatActivity {
                 public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                     try {
                         if (response.getBoolean("trang_thai")) {
-                            setLike(response.getBoolean("like_new"));
-                            Toast.makeText(PlayerFootballDetailActivity.this, "Chỉnh sửa yêu thích thành công", Toast.LENGTH_SHORT).show();
+                            Boolean likeNew = response.getBoolean("like_new");
+                            setLike(likeNew);
+
+                            if(likeNew) {
+                                Toast.makeText(PlayerFootballDetailActivity.this, "Thêm vào yêu thích thành công", Toast.LENGTH_SHORT).show();
+                            } else {
+                                Toast.makeText(PlayerFootballDetailActivity.this, "Bỏ yêu thích thành công", Toast.LENGTH_SHORT).show();
+                            }
                         } else {
-                            Toast.makeText(PlayerFootballDetailActivity.this, "Có lỗi trong lúc thêm yêu thích, vui lòng thử lại", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(PlayerFootballDetailActivity.this, "Có lỗi trong lúc thực hiện thay đổi. Vui lòng thử lại", Toast.LENGTH_SHORT).show();
                         }
                     } catch (JSONException e) {
                         e.printStackTrace();
@@ -162,14 +168,5 @@ public class PlayerFootballDetailActivity extends AppCompatActivity {
         txtName = findViewById(R.id.nameTextView);
         imbLike = findViewById(R.id.likeIMB);
         lLoad = findViewById(R.id.loadLayout);
-    }
-
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if(keyCode == KeyEvent.KEYCODE_BACK) {
-            Intent i = new Intent(PlayerFootballDetailActivity.this, MainActivity.class);
-            startActivity(i);
-        }
-        return false;
     }
 }

@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/drawable-v24/ic_like_colorPrimary.xml" value="0.192" />
         <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/drawable/background_gradient_horizontal.xml" value="0.2525" />
         <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/drawable/background_gradient_vertical.xml" value="0.2525" />
         <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/drawable/bg_bottom.xml" value="0.2525" />
@@ -11,11 +12,15 @@
         <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/drawable/bg_gradient_vertical.xml" value="0.2525" />
         <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/drawable/bg_radius_15.xml" value="0.2265" />
         <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.2525" />
+        <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/drawable/ic_baseline_phone_android_24.xml" value="0.192" />
         <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/drawable/ic_checked.xml" value="0.2525" />
+        <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/drawable/ic_close.xml" value="0.192" />
         <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/drawable/ic_empty.xml" value="0.2525" />
         <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/drawable/ic_eye.xml" value="0.2525" />
         <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/drawable/ic_like.xml" value="0.121" />
+        <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/drawable/ic_like_color_primary.xml" value="0.192" />
         <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/drawable/ic_listview.xml" value="0.2265" />
+        <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/drawable/ic_search.xml" value="0.192" />
         <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/drawable/ic_setting.xml" value="0.2525" />
         <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/drawable/ic_unlike.xml" value="0.2525" />
         <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/drawable/ic_us_dollar.xml" value="0.2525" />
@@ -26,6 +31,9 @@
         <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/layout/activity_player_football_detail.xml" value="0.25" />
         <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/layout/activity_profile.xml" value="0.25" />
+        <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/layout/activity_sign_up.xml" value="0.25" />
+        <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/layout/dialog_matkhau_nguoidung_thaydoi.xml" value="0.25" />
+        <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/layout/dialog_thongtin_nguoidung_thaydoi.xml" value="0.25" />
         <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/layout/fragment_club.xml" value="0.25" />
         <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/layout/fragment_infomation.xml" value="0.25" />
         <entry key="..\:/TU/HOC TAP/122/Android/fo4T/app/src/main/res/layout/fragment_like.xml" value="0.25" />

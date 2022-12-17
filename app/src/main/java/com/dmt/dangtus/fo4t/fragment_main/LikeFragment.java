@@ -39,7 +39,6 @@ import java.util.List;
 import cz.msebera.android.httpclient.Header;
 
 public class LikeFragment extends ListFragment {
-
     private ProgressBar pbLoad;
     private LinearLayout lError;
     private Button btnThuLai;
@@ -104,20 +103,7 @@ public class LikeFragment extends ListFragment {
                 try {
                     if(response.getBoolean("trang_thai")) {
                         JSONArray data = response.getJSONArray("data");
-                        for (int i=0; i<data.length(); i++) {
-                            JSONObject object = data.getJSONObject(i);
-
-                            PlayerFootball playerFootball = new PlayerFootball();
-                            playerFootball.setId(object.getInt("id"));
-                            playerFootball.setName(object.getString("ten_cau_thu"));
-                            playerFootball.setImage(object.getString("hinh_anh"));
-                            //set current club
-                            JSONObject clubObject = object.getJSONObject("doi_tuyen_hien_tai");
-                            Club currentClub = new Club(clubObject.getInt("id"), clubObject.getString("ten_clb"), clubObject.getString("hinh_anh"));
-                            playerFootball.setCurrentClub(currentClub);
-
-                            playerFootballList.add(playerFootball);
-                        }
+                        serDataListView(data);
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -132,6 +118,27 @@ public class LikeFragment extends ListFragment {
                 pbLoad.setVisibility(View.INVISIBLE);
             }
         });
+    }
+
+    private void serDataListView(JSONArray jsonData) throws JSONException {
+        int jsonDataLen = jsonData.length();
+
+        for (int i = 0; i < jsonDataLen; i++) {
+            JSONObject playerFootballObject = jsonData.getJSONObject(i);
+
+            PlayerFootball playerFootball = new PlayerFootball();
+            playerFootball.setId(playerFootballObject.getInt("id"));
+            playerFootball.setName(playerFootballObject.getString("ten_cau_thu"));
+            playerFootball.setImage(playerFootballObject.getString("hinh_anh"));
+            //set current club
+            JSONObject clubObject = playerFootballObject.getJSONObject("doi_tuyen_hien_tai");
+            Club currentClub = new Club(clubObject.getInt("id"), clubObject.getString("ten_clb"), clubObject.getString("hinh_anh"));
+            playerFootball.setCurrentClub(currentClub);
+
+            playerFootballList.add(playerFootball);
+        }
+
+        adapter.notifyDataSetChanged();
     }
 
     private void anhXa(View v) {

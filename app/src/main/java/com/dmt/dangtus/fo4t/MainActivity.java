@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity implements MainInterface {
 
                     case 1:
                         bottomNavigation.getMenu().findItem(R.id.action_like).setChecked(true);
+                        viewPagerAdapter.notifyItemChanged(position);
                         break;
 
                     case 2:

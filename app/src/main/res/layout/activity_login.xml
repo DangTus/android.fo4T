@@ -53,7 +53,8 @@
             android:hint="User name"
             android:inputType="textPersonName"
             android:padding="15dp"
-            android:textSize="18sp"/>
+            android:textSize="18sp"
+            android:imeOptions="actionNext"/>
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -70,7 +71,8 @@
                 android:hint="Password"
                 android:inputType="textPassword"
                 android:padding="15dp"
-                android:textSize="18sp"/>
+                android:textSize="18sp"
+                android:imeOptions="actionDone"/>
 
             <ImageButton
                 android:id="@+id/eyeIMB"
@@ -111,7 +113,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="8dp"
-                android:text=" Tạo tài khoản"
+                android:text="Tạo tài khoản"
                 android:textColor="@color/colorPrimary"
                 android:textSize="15sp"/>
         </LinearLayout>

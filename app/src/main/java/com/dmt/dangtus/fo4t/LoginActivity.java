@@ -1,7 +1,9 @@
 package com.dmt.dangtus.fo4t;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -48,7 +50,6 @@ public class LoginActivity extends AppCompatActivity {
 
         sharedPreferences = getSharedPreferences("dataLogin", MODE_PRIVATE);
         edUserName.setText(sharedPreferences.getString("userName", ""));
-        edPassword.setText(sharedPreferences.getString("password", ""));
 
         //bat su kien click vao nut dang nhap
         btnLogin.setOnClickListener(new View.OnClickListener() {
@@ -58,7 +59,8 @@ public class LoginActivity extends AppCompatActivity {
                 String password = edPassword.getText().toString().trim();
 
                 if(userName.isEmpty() || password.isEmpty()) {
-                    Toast.makeText(LoginActivity.this, "Vui lòng nhập đầy đủ", Toast.LENGTH_SHORT).show();
+                    String message = "Vui lòng nhập đầy đủ";
+                    showDialog(message);
                 } else {
                     login(userName, password);
                 }
@@ -87,6 +89,14 @@ public class LoginActivity extends AppCompatActivity {
                 Selection.setSelection(etext, position);
             }
         });
+
+        txtSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LoginActivity.this, SignUpActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void login(String user, String pass) {
@@ -100,25 +110,22 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 try {
-                    if(response.getString("trang_thai").equals("success")) {
+                    if(response.getBoolean("trang_thai")) {
                         JSONObject data = response.getJSONObject("data");
 
                         SharedPreferences.Editor editor = sharedPreferences.edit();
                         editor.putInt("id", data.getInt("id"));
                         editor.putString("name", data.getString("ten_nguoi_dung"));
-                        editor.putString("email", data.getString("email"));
                         editor.putString("userName", user);
-                        editor.putString("password", pass);
-                        editor.putBoolean("remember", true);
                         editor.commit();
 
                         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                         startActivity(intent);
                     } else {
-                        Toast.makeText(LoginActivity.this, "Ten nguoi dung hoac mat khau khong dung", Toast.LENGTH_SHORT).show();
+                        String message = "Tên người dùng hoặc mật khẩu không đúng. Vui lòng đăng nhập lại";
+                        showDialog(message);
+                        edPassword.setText("");
                     }
-
-
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -133,6 +140,22 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
+    private void showDialog(String message) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage(message);
+        builder.setCancelable(false);
+        builder.setTitle("Lỗi");
+
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+            }
+        });
+
+        builder.show();
+    }
+
     private void anhXa() {
         txtSignUp = findViewById(R.id.signUpLayout);
 
@@ -145,5 +168,10 @@ public class LoginActivity extends AppCompatActivity {
         imbEye.setTag(R.drawable.ic_eye);
 
         lLoad = findViewById(R.id.loadLayout);
+    }
+
+    @Override
+    public void onBackPressed() {
+        this.finishAffinity();
     }
 }

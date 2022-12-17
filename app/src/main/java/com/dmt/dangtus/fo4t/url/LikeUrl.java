@@ -5,8 +5,7 @@ import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 
 public class LikeUrl {
-    private static String urlBase = "https://top1elo.000webhostapp.com/like/";
-//    private static String urlBase = "http://192.168.1.3/quanlicauthu/like/";
+    private static String urlBase = "http://top1elo.lovestoblog.com/quanlicauthu/like/";
 
     private static AsyncHttpClient client = new AsyncHttpClient();
 
@@ -15,6 +14,7 @@ public class LikeUrl {
     }
 
     public static void get(String url, RequestParams params, AsyncHttpResponseHandler responseHandler) {
+        client.addHeader("Cookie", Cookie.get);
         client.get(urlBase + url, params, responseHandler);
     }
 }

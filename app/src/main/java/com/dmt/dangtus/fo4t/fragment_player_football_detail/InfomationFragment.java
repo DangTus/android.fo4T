@@ -79,20 +79,22 @@ public class InfomationFragment extends Fragment {
 
         PlayerFootballUrl.get("getByID.php", params, new JsonHttpResponseHandler() {
             @Override
-            public void onSuccess(int statusCode, Header[] headers, JSONArray response) {
+            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 try {
-                    JSONObject object = response.getJSONObject(0);
+                    if(response.getBoolean("trang_thai")) {
+                        JSONArray dataJson = response.getJSONArray("data");
+                        JSONObject object = dataJson.getJSONObject(0);
 
-                    txtNgaySinh.setText(object.getString("ngay_sinh"));
-                    txtChieuCao.setText(object.getString("chieu_cao"));
-                    txtCanNang.setText(object.getString("can_nang"));
-                    txtDanhTieng.setText(object.getString("danh_tieng"));
-                    rbKyThuat.setRating(object.getInt("ky_thuat"));
-                    //set quoc gia
-                    JSONObject countryObject = object.getJSONObject("quoc_gia");
-                    txtQuocGia.setText(countryObject.getString("ten_quoc_gia"));
-                    Glide.with(getActivity()).load(countryObject.getString("hinh_anh")).fitCenter().into(imvQuocGia);
-
+                        txtNgaySinh.setText(object.getString("ngay_sinh"));
+                        txtChieuCao.setText(object.getString("chieu_cao"));
+                        txtCanNang.setText(object.getString("can_nang"));
+                        txtDanhTieng.setText(object.getString("danh_tieng"));
+                        rbKyThuat.setRating(object.getInt("ky_thuat"));
+                        //set quoc gia
+                        JSONObject countryObject = object.getJSONObject("quoc_gia");
+                        txtQuocGia.setText(countryObject.getString("ten_quoc_gia"));
+                        Glide.with(getActivity()).load(countryObject.getString("hinh_anh")).fitCenter().into(imvQuocGia);
+                    }
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }

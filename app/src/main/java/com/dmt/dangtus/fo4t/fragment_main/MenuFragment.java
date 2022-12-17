@@ -50,6 +50,7 @@ public class MenuFragment extends Fragment {
                 if(idUser != 0) {
                     SharedPreferences.Editor editor = sharedPreferences.edit();
                     editor.remove("id");
+                    editor.remove("name");
                     editor.commit();
                 }
                 Intent intent = new Intent(getActivity(), LoginActivity.class);
